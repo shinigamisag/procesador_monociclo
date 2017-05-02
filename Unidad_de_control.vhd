@@ -44,9 +44,52 @@ begin
 								
 								ALUOP <= "000111";
 								
+							when "010001" => --andCC
+							
+								ALUOP <= "010001";
+								
+							when "010010" => --orCC
+							
+								ALUOP <= "010010";
+								
+							when "010110" => --orNcc
+							
+								ALUOP <= "010110";
+								
+							when "001000" =>--addx
+							
+								ALUOP <= "001000";
+								
+							when "010000" => -- addcc
+							
+								ALUOP <= "010000";
+								
+							when "011000" => -- addxcc
+							
+								ALUOP <= "011000";
+								
+							when "010100" => --subcc
+							
+								ALUOP <= "011000";
+								
+							when "001100" => --subX
+							
+								ALUOP <= "001100";
+								
+							when "011100" => --subXCC
+							
+								ALUOP <= "011100";
+								
+							when "010011" => --xorCC
+							
+								ALUOP <= "010011";
+								
+							when "010111" => --xnorCC
+							
+								ALUOP <= "010111";
 							when others => -- otras instrucciones
 								
-								ALUOP <= "000000";
+								ALUOP <= "000000";			
 						end case;
 					else
 						ALUOP <= "000000";
